@@ -77,3 +77,67 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+# ISSUEs tips
+
+First of all, start without cache:
+
+```
+npm start -- --reset-cache
+```
+
+## gradle
+
+Windows with error on last version of gradle:
+
+Possible location:
+
+```
+android\gradle\wrapper\gradle-wrapper.propertie
+```
+
+Look for:
+
+```
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.6-all.zip
+```
+
+Try change to:
+
+```
+distributionUrl=https://services.gradle.org/distributions/gradle-8.5-all.zip
+```
+
+## Icons
+
+```
+https://github.com/oblador/react-native-vector-icons?tab=readme-ov-file#react-native-web-setup
+```
+
+## react-native-gesture-handler
+
+```
+npm install react-native-gesture-handler
+```
+
+## moti
+
+[https://moti.fyi/installation](https://moti.fyi/installation)
+
+```bash
+npm i moti --legacy-peer-deps
+npm i react-native-reanimated
+npm i react-native-gesture-handler
+```
+
+## fixes
+
+```
+I am also having same issue - React native - 0.70.6 react-native-screens - "^3.15.0"
+
+instead of "^3.15.0" set "3.29.0" (without ^)
+```
+
+## Fonts
+
+https://dev.to/mitchiemt11/custom-fonts-in-react-native-pro-tip-4693
