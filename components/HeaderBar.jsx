@@ -11,7 +11,7 @@ const HeaderBar = () => {
   };
 
   return (
-    <View className="w-full flex flex-row justify-between items-center p-2 bg-brown-dark rounded-md">
+    <View className="w-full flex flex-row justify-between items-center p-2 bg-brown rounded-md">
       <Text className="text-white font-anton">Hi, Username...</Text>
       <TouchableOpacity
         onPress={handleLogout}
