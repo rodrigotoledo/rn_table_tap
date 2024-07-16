@@ -35,12 +35,12 @@ const CustomerHomeScreen = () => {
 
   const fetchRecommendedData = async () => {
     const newData = generateFakeData(10);
-    setRecommendedData(prevData => [...prevData, ...newData]);
+    setRecommendedData(newData);
   };
 
   const fetchFrequentData = async () => {
     const newData = generateFakeData(10);
-    setFrequentData(prevData => [...prevData, ...newData]);
+    setFrequentData(newData);
   };
 
   useEffect(() => {
@@ -63,30 +63,28 @@ const CustomerHomeScreen = () => {
           <CategoryCarousel items={data} />
         </View>
       </View>
-      <View className="flex-1">
-        <View className="h-1/2 bg-white rounded-lg p-4 mb-2">
+      <View>
+        <View className=" bg-white rounded-lg p-4 mb-2">
           <Text className="text-lg text-brown-dark mb-2 font-anton">
             Recommended Based on Location
           </Text>
           <FlatList
+            style={{height: 120}}
             data={recommendedData}
             renderItem={({item}) => <LocationItem item={item} />}
             keyExtractor={item => item.id}
-            onEndReached={() => setRecommendedPage(prevPage => prevPage + 1)}
-            onEndReachedThreshold={0.5}
           />
         </View>
 
-        <View className="h-1/2 bg-white rounded-lg p-4">
+        <View className=" bg-white rounded-lg p-4">
           <Text className="text-lg text-brown-dark mb-2 font-anton">
             Frequent Locations
           </Text>
           <FlatList
+            style={{height: 120}}
             data={frequentData}
             renderItem={({item}) => <LocationItem item={item} />}
             keyExtractor={item => item.id}
-            onEndReached={() => setFrequentPage(prevPage => prevPage + 1)}
-            onEndReachedThreshold={0.5}
           />
         </View>
       </View>
