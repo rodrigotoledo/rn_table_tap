@@ -18,6 +18,21 @@ npm start
 yarn start
 ```
 
+### Tip
+
+In linux (ubuntu...), you will need to install `adb` and run the following commands:
+
+```bash
+sudo apt-get install adb
+```
+
+And make the bridge available:
+
+```bash
+adb reverse tcp:9090 tcp:9090
+adb reverse tcp:8081 tcp:8081
+```
+
 ## Step 2: Start your Application
 
 Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
