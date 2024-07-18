@@ -23,7 +23,7 @@ const LoginScreen = ({navigation}) => {
 
   const handleLogin = () => {
     if (email === 'test@test.com' && password === 'password') {
-      navigation.navigate('CustomerHome');
+      navigation.navigate('Home');
     } else {
       Alert.alert(
         'Error',
