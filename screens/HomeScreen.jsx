@@ -61,8 +61,8 @@ const HomeScreen = () => {
           <CategoryCarousel items={data} />
         </View>
       </View>
-      <View>
-        <View className=" bg-white rounded-lg p-4 mb-2">
+      <View className="flex-1">
+        <View className=" bg-white rounded-lg p-4 mb-2 h-1/2">
           <Text className="text-lg text-brown-dark mb-2 font-anton">
             Recommended Based on Location
           </Text>
@@ -74,7 +74,7 @@ const HomeScreen = () => {
           />
         </View>
 
-        <View className=" bg-white rounded-lg p-4">
+        <View className=" bg-white rounded-lg p-4 h-1/2">
           <Text className="text-lg text-brown-dark mb-2 font-anton">
             Frequent Locations
           </Text>
