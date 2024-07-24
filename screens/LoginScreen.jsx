@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
 });
 
 const LoginScreen = ({navigation}) => {
-  const [email, setEmail] = useState('test@test.com');
-  const [password, setPassword] = useState('password');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     if (email === 'test@test.com' && password === 'password') {
