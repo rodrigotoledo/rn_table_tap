@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+import React, {useState, useCallback } from 'react';
 import {
   SafeAreaView,
   Text,
@@ -20,6 +21,14 @@ const styles = StyleSheet.create({
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  useFocusEffect(
+    useCallback(() => {
+
+      setEmail('')
+      setPassword('')
+    }, [])
+  );
 
   const handleLogin = () => {
     if (email === 'test@test.com' && password === 'password') {
