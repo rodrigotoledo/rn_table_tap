@@ -138,7 +138,7 @@ instead of "^3.15.0" set "3.29.0" (without ^)
 https://dev.to/mitchiemt11/custom-fonts-in-react-native-pro-tip-4693
 
 
-# 📱 Creating a Mobile Application in React Native with Quality and Effects
+# 📱 Building a Stunning React Native App with TailwindCSS: Smooth Navigation and Stylish Effects
 
 ## 1. Creating the Application
 ### Installing and Using TailwindCSS
@@ -1188,4 +1188,25 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+```
+
+## 9. Reafactoring the LoginScreen with callbacks
+
+Clear inputs with callbacks with:
+
+```jsx
+import { useFocusEffect } from '@react-navigation/native';
+import React, {useState, useCallback } from 'react';
+
+const LoginScreen = ({navigation}) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  useFocusEffect(
+    useCallback(() => {
+
+      setEmail('')
+      setPassword('')
+    }, [])
+  );
 ```
