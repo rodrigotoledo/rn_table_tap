@@ -8,7 +8,7 @@
 - Understand how to utilize TailwindCSS for styling components.
 
 ```bash
-npx @react-native-community/cli@latest init TableTap
+npx react-native init TableTap --version 0.74.3
 cd TableTap
 ```
 
@@ -46,7 +46,7 @@ Loof for `tailwind.config.js` and add
 // tailwind.config.js
 
 module.exports = {
-  content: ["./App.{js,jsx,ts,tsx}", "./screens/**/*.{js,jsx,ts,tsx}"],
+  content: ["./App.{js,jsx,ts,tsx}", "./screens/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
   },
@@ -763,7 +763,7 @@ npm install @motify/core @motify/components --save
 
 - Develop a carousel component to display rotating content on the home screen.
 
-Create the component `CategoryCarousel`
+Create `components/CategoryCarousel.jsx` with:
 
 ```jsx
 import React, {useState} from 'react';
@@ -934,7 +934,7 @@ export default HomeScreen;
 - Design a header component that includes a logout button.
 - Implement navigation to the login screen when the logout button is pressed.
 
-Create the component `HeaderBar` with:
+Create `components/HeaderBar.jsx` with:
 
 ```jsx
 import React from 'react';
@@ -1097,14 +1097,6 @@ And make the bridge available:
 ```bash
 adb reverse tcp:9090 tcp:9090
 adb reverse tcp:8081 tcp:8081
-```
-
-### fixes
-
-```pre
-I am also having same issue - React native - 0.70.6 react-native-screens - "^3.15.0"
-
-instead of "^3.15.0" set "3.29.0" (without ^)
 ```
 
 # Learn More
